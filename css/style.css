@@ -1,0 +1,178 @@
+/* Style pour la grosse bannière */
+.banner-large {
+  position: relative;
+  background-image: url('https://cdn.pixabay.com/photo/2016/12/03/15/44/fireworks-1880045_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.banner-large::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.banner-large .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-large h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 15px cyan;
+}
+
+.banner-large p {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px cyan;
+}
+
+.banner-large .btn {
+  font-size: 1.25rem;
+  padding: 10px 30px;
+  color: #0A0A0A;
+  background: linear-gradient(90deg, cyan, blue);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px cyan;
+  transition: all 0.3s;
+}
+
+.banner-large .btn:hover {
+  box-shadow: 0 0 20px cyan;
+}
+
+/* Style pour la bannière plus petite */
+.banner-small {
+  position: relative;
+  background-image: url('https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.banner-small::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+.banner-small .container {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-small h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px cyan;
+}
+
+.presentation-element {
+  padding: 40px 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.presentation-element h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px cyan;
+}
+
+.presentation-element p {
+  font-size: 1.5rem;
+}
+
+.presentation-element .btn {
+  font-size: 1rem;
+  padding: 12px 30px;
+  background: linear-gradient(90deg, cyan, blue);
+  box-shadow: 0 0 10px cyan;
+}
+
+.events-list .card {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.events-list .card-img-top {
+  border-radius: 10px 10px 0 0;
+}
+
+.events-list .card-body {
+  padding: 20px;
+}
+
+.events-list .btn {
+  margin-top: 10px;
+  background: linear-gradient(90deg, cyan, blue);
+  box-shadow: 0 0 10px cyan;
+}
+
+/* Style futuriste pour le formulaire d'authentification */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0A0A0A;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  font-size: 2rem;
+  text-shadow: 0 0 10px cyan;
+}
+
+.auth-card .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  box-shadow: 0 0 10px cyan;
+}
+
+.auth-card .btn {
+  background: linear-gradient(90deg, cyan, blue);
+  box-shadow: 0 0 10px cyan;
+  color: white;
+  transition: all 0.3s;
+}
+
+.auth-card .btn:hover {
+  box-shadow: 0 0 20px cyan;
+}
