@@ -1,0 +1,742 @@
+/* ---------------------- */
+/*       BASE GLOBALE     */
+/* ---------------------- */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #141414; /* Noir intense */
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #C5A000; /* Doré */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #FFD700; /* Doré plus lumineux */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #B7B7B7; /* Gris clair */
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #C5A000; /* Doré */
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #222222; /* Gris foncé */
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #C5A000;
+}
+
+.search-container input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFF;
+  padding: 5px;
+  font-size: 1rem;
+  width: 150px;
+}
+
+.search-container input::placeholder {
+  color: #B7B7B7;
+}
+
+.search-container button {
+  background: none;
+  border: none;
+  color: #C5A000;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.search-container button:hover {
+  color: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav-links {
+      margin-top: 10px;
+      gap: 15px;
+  }
+
+  .search-container {
+      margin-top: 10px;
+  }
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #141414; /* Fond noir */
+  color: #E0E0E0; /* Texte gris clair */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header */
+.table thead {
+  background-color: #C5A000; /* Doré */
+  color: #141414; /* Texte noir */
+  text-transform: uppercase;
+}
+
+.table th, 
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #444; /* Bordure gris foncé */
+}
+
+/* Table Hover Effect */
+.table-hover tbody tr:hover {
+  background-color: #222222; /* Gris foncé au survol */
+  transition: background 0.3s ease-in-out;
+}
+
+/* Row Styles */
+.table-active { background-color: #333333; } /* Gris plus foncé */
+.table-primary { background-color: #C5A000; color: #141414; } /* Doré */
+.table-secondary { background-color: #666666; } /* Gris moyen */
+.table-success { background-color: #4CAF50; } /* Vert succès */
+.table-danger { background-color: #D32F2F; } /* Rouge danger */
+.table-warning { background-color: #F57C00; } /* Orange warning */
+.table-info { background-color: #0288D1; } /* Bleu info */
+.table-light { background-color: #B7B7B7; color: #141414; } /* Gris clair */
+.table-dark { background-color: #1E1E1E; } /* Noir intense */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table th, .table td {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
+
+
+/* Dropdown Menu */
+.dropdown-menu {
+
+  border: 1px solid #C5A000; /* Bordure dorée */
+}
+
+.dropdown-item {
+  color: #B7B7B7; /* Gris clair */
+}
+
+.dropdown-item:hover {
+  background-color: #C5A000; /* Doré */
+ /* color: #1A1A1A; /* Noir */
+}
+
+/* Search Input */
+.form-control {
+  background-color: #333333; /* Gris foncé */
+  border: 1px solid #C5A000; /* Bordure dorée */
+  color: #FFFFFF; /* Texte blanc */
+}
+
+.form-control::placeholder {
+  color: #B7B7B7; /* Gris clair */
+}
+
+.form-control:focus {
+  border-color: #FFD700; /* Doré clair */
+  box-shadow: 0 0 5px #FFD700;
+}
+
+/* Search Button */
+.btn-secondary {
+  background-color: #C5A000;
+  border: none;
+  color: #1A1A1A;
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  background-color: #FFD700;
+  color: #1A1A1A;
+}
+/* ---------------------- */
+/*      TYPOGRAPHIE       */
+/* ---------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #222;
+  border: none;
+  margin-bottom: 0;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.8;
+  background-color: #FDF0D5;
+  padding: 10px;
+  border-left: 4px solid #C5A000;
+}
+
+
+blockquote {
+  font-style: italic;
+  font-size: 18px;
+  color: #666;
+  border-left: 5px solid #CB9666;
+  padding-left: 15px;
+  margin: 20px 0;
+}
+
+
+
+/* ---------------------- */
+/*    PALETTE COULEURS    */
+/* ---------------------- */
+.color-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.color-card {
+  width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  text-align: center;
+  margin: 20px auto;
+  padding-bottom: 10px;
+}
+
+.color-box {
+  height: 50px;
+  width: 100%;
+}
+
+.color-info {
+  padding: 3px;
+  background-color: white;
+}
+
+.color-info h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.color-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ---------------------- */
+/*        BOUTONS         */
+/* ---------------------- */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  color: #B7B7B7; color: #1A1A1A;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  display: inline-flex;  /* Changement ici, pour mieux contrôler les boutons */
+  justify-content: center; /* Aligner le texte au centre */
+  align-items: center;     /* Aligner verticalement */
+  width: auto;            /* Important : ajuste la largeur à celle du contenu */
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Couleurs des boutons */
+.btn.primary { background-color: #C5A000; }  /* Or doré */
+.btn.secondary { background-color: #8A6E3B; }  /* Or vieilli */
+.btn.dark { background-color: #1A1A1A; }  /* Noir profond */
+.btn.medium-light { background-color: #4C4C4C; }  /* Gris moyen */
+.btn.light { background-color: #B7B7B7; color: #1A1A1A; }  /* Gris clair avec texte noir */
+
+.btn.warning {  background-color: #C5A000; }
+.btn.danger { background-color: #8A6E3B }
+.btn.info {  background-color: #4C4C4C; }
+.btn.success {  background-color: #B7B7B7; color: #1A1A1A; }
+
+/* Boutons Outline */
+.btn-outline {
+  background-color: transparent !important;
+  border: 2px solid;
+  color: inherit;
+  display: inline-block;  /* Important pour les boutons outline */
+  width: auto;            /* Pour empêcher la largeur 100% */
+}
+
+.btn-outline.primary {
+  border-color: #C5A000;
+  color:  #C5A000;
+}
+
+.btn-outline.warning {
+  border-color:#8A6E3B;
+  color: #8A6E3B;
+}
+
+.btn-outline.danger {
+  border-color: #1A1A1A;
+  color: #1A1A1A;
+}
+
+.btn-outline.info {
+  border-color: #4C4C4C;
+  color:  #4C4C4C;
+}
+
+.btn-outline.success {
+  border-color: #B7B7B7;
+  color: #B7B7B7;
+}
+
+.btn-outline:hover {
+  background-color: inherit !important;
+  color: #B7B7B7 !important;
+}
+
+.btn-outline.primary:hover {
+  background-color: #C5A000 !important;
+}
+
+.btn-outline.warning:hover {
+  background-color: #f68b1a !important;
+}
+
+.btn-outline.danger:hover {
+  background-color: #C5A000 !important;
+}
+
+.btn-outline.info:hover {
+  background-color: #47A4A7 !important;
+}
+
+.btn-outline.success:hover {
+  background-color: #65B592 !important;
+}
+
+/* Tailles des boutons */
+.btn-sm { padding: 5px 10px; font-size: 14px; }
+.btn-lg { padding: 15px 30px; font-size: 18px; }
+
+/* ---------------------- */
+/*        LISTES          */
+/* ---------------------- */
+
+/* Conteneur des listes en ligne */
+.lists-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Chaque liste prend 50% de l’espace */
+.icon-list, .number-list {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Style des éléments de la liste */
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 16px; /* Aligné avec les paragraphes */
+  color: #444; /* Même couleur que les <p> */
+  border-bottom: 1px solid #eee;
+  background: white; /* Fond blanc */
+  border-radius: 5px;
+  margin-bottom: 8px; /* Espacement entre chaque élément */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Dernier élément sans bordure */
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+/* Icônes plus petites */
+.list-group-item .icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #4CAF50;
+}
+
+/* Style des numéros en cercle */
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #C5A000;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+/* Effet au survol */
+.list-group-item:hover {
+  background: #f3f3f3;
+}
+
+
+/* ---------------------- */
+/*        ICONES          */
+/* ---------------------- */
+.icon-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.icon {
+  font-size: 40px;
+  color: #d5ab85; /* Couleur de la marque */
+  transition: 0.3s ease-in-out;
+}
+
+.icon:hover {
+  color: #65B592; /* Changement au survol */
+  transform: scale(1.1);
+}
+
+/* ---------------------- */
+/*       FORMULAIRES      */
+/* ---------------------- */
+
+.form-section {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style général des inputs, selects et textarea */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  display: block;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color:  #C5A000;
+  outline: none;
+}
+
+/* Label */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style du select */
+select {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Fieldset pour radio et checkboxes */
+fieldset {
+  border: none;
+  margin: 10px 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Alignement des checkboxes et radios */
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style des radios et checkboxes */
+input[type="radio"], input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid  #C5A000;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+/* Effet quand la case est cochée */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #C5A000;
+  border-color:#8A6E3B;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ---------------------- */
+/*      SECTIONS          */
+/* ---------------------- */
+section {
+  margin: 40px 0;
+}
+
+section h2 {
+  border-bottom: 3px solid  #C5A000;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* cards */ 
+
+/*body {
+ /* background-color: #111; /* Fond noir 
+  color: #ddd; /* Texte gris clair 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+*/
+
+/* En-tête */
+header {
+  background-color: #C5A000; /* Doré */
+  color: #111; /* Texte noir */
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Sections */
+section {
+  padding: 30px;
+}
+
+/* Titres des sections */
+section h2 {
+  color: #C5A000; /* Doré */
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cartes */
+.card {
+  background-color: #222; /* Gris foncé pour les cartes */
+  border: 2px solid #C5A000; /* Bordure dorée */
+  border-radius: 8px;
+  color: #ddd; /* Texte gris clair */
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3); /* Ombre dorée subtile */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  width: 200px;
+  padding: 20px;
+}
+
+/* Effet au survol des cartes */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.4); /* Ombre dorée renforcée */
+}
+
+/* Titre de la carte */
+.card-title {
+  color: #C5A000; /* Doré */
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Texte de la carte */
+.card-text {
+  color: #bbb; /* Gris clair */
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Progress Bar Container */
+.progress {
+  background-color: #222; /* Fond gris foncé */
+  border-radius: 8px;
+  height: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3); /* Glow doré subtil */
+  margin-bottom: 20px;
+}
+
+/* Striped Animation */
+@keyframes progress-stripes {
+  from { background-position: 40px 0; }
+  to { background-position: 0 0; }
+}
+
+
+/* Barre de progression */
+.progress-bar {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background-size: 40px 40px;
+  transition: width 1s ease-in-out;
+}
+
+/* Applique l'effet rayé et l'animation */
+.progress-bar-striped {
+  background-image: linear-gradient(
+      45deg, 
+      rgba(255, 215, 0, 0.4) 25%, 
+      rgba(255, 215, 0, 0.1) 25%, 
+      rgba(255, 215, 0, 0.1) 50%, 
+      rgba(255, 215, 0, 0.4) 50%, 
+      rgba(255, 215, 0, 0.4) 75%, 
+      rgba(255, 215, 0, 0.1) 75%, 
+      rgba(255, 215, 0, 0.1)
+  ); /* Effet rayé doré */
+  background-size: 40px 40px;
+  background-position: 0 0;
+  animation: progress-stripes 1s linear infinite;
+}
+
+/* Couleurs spécifiques */
+.progress-bar.bg-success { background-color: #666; } /* Gris moyen */
+.progress-bar.bg-info { background-color: #888; } /* Gris clair */
+.progress-bar.bg-warning { background-color: #C5A000; } /* Doré intense */
+.progress-bar.bg-danger { background-color: #444; } /* Noir intense */
+
